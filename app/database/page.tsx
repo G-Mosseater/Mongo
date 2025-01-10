@@ -36,14 +36,7 @@ async function run() {
   }
 }
 
-type Props = {
-  greetingObj: {
-    _id: string;
-    greeting: string;
-    greet: string;
-  };
 
-};
 
 
 export default async function Database() {
