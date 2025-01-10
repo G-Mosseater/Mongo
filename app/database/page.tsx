@@ -4,7 +4,7 @@ import Front from "../front/page";
 import Back from "../back/page";
 
 
-
+export const dynamic = 'force-dynamic'
 
 
 
