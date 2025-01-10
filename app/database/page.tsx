@@ -2,7 +2,12 @@ import { MongoClient, ServerApiVersion } from "mongodb";
 import Link from "next/link";
 import Front from "../front/page";
 import Back from "../back/page";
-import Delete from "../components/delete";
+
+
+
+
+
+
 const uri = process.env.MONGODB_URI;
 if (!uri) {
   throw new Error("ERROR BLABLABLA MONGO");
@@ -37,7 +42,21 @@ type Props = {
     greeting: string;
     greet: string;
   };
+
 };
+
+
+export const getServerSideProps = async () => {
+  const greetings = await run();
+  return {
+    props: {
+      greetings,
+    },
+  };
+};
+
+
+
 export default async function Database({ greetingObj }: Props) {
   const greetings = await run();
   return (
