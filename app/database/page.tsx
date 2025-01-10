@@ -46,18 +46,7 @@ type Props = {
 };
 
 
-export const getServerSideProps = async () => {
-  const greetings = await run();
-  return {
-    props: {
-      greetings,
-    },
-  };
-};
-
-
-
-export default async function Database({ greetingObj }: Props) {
+export default async function Database() {
   const greetings = await run();
   return (
     <>
