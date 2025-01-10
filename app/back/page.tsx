@@ -1,7 +1,6 @@
 
 'use server'
 import EditGreeting from "@/app/components/editGreeting"
-import Delete from "../components/delete"
 
 type Greeting = {
     greeting: string;

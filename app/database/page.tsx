@@ -10,7 +10,7 @@ import Back from "../back/page";
 
 const uri = process.env.MONGODB_URI;
 if (!uri) {
-  throw new Error("ERROR BLABLABLA MONGO");
+  throw new Error("ERROR  MONGO");
 }
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
